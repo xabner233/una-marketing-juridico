@@ -395,3 +395,38 @@ body.lb-aberto { overflow: hidden; }
   .cine { height: 100svh; }
   .momento:not(:first-of-type), .cine-dica { display: none; }
 }
+
+/* ── Ajustes LR Social Media · celular (out/2026) ─────────────────────── */
+@media (max-width: 860px) {
+  /* Textos centralizados da abertura saíam cortados pela esquerda */
+  .momento--centro { left: var(--gutter); right: var(--gutter); width: auto; text-align: left; transform: translateY(24px); }
+  .momento--centro.ativo { transform: none; }
+  .momento, .momento--direita, .momento--centro { bottom: 14vh; }
+  .momento .painel, .momento.painel { padding: 22px 20px; }
+  .destaque { font-size: 26px; }
+  .titulo-abertura { font-size: clamp(32px, 9.6vw, 46px); overflow-wrap: anywhere; }
+
+  /* Menos espaço vazio entre as seções */
+  .secao { padding: 64px var(--gutter); }
+  .secao--trabalhos { padding-top: 64px; }
+  .arte--direita, .arte--esquerda { height: 60%; opacity: .6; }
+
+  /* Painéis com respiro proporcional à tela */
+  .painel { padding: 26px 22px; }
+  h2 { font-size: clamp(30px, 8.4vw, 40px); }
+  .secao--trabalhos h2 { font-size: clamp(32px, 9vw, 44px); }
+
+  /* Botões ocupam a largura e não quebram o texto torto */
+  .botao { width: 100%; text-align: center; line-height: 1.25; padding: 16px 22px; }
+  .contato-acoes { gap: 14px; }
+  .trabalhos-fim .link { align-self: flex-start; }
+
+  /* Filtros em duas linhas em vez de sumirem pela lateral */
+  .filtros { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding-inline: 0; }
+  .filtro { padding: 10px 16px; font-size: 13px; }
+
+  /* Selo 30+ e rodapé mais compactos */
+  .selo strong { font-size: 52px; }
+  .rodape-painel { padding: 22px; flex-direction: column; align-items: flex-start; }
+  .rodape { padding-bottom: 96px; }
+}
