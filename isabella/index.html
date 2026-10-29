@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psicóloga Isabella Lacerda</title>
+<meta name="description" content="Isabella Lacerda, psicóloga clínica e organizacional (CRP 06/192029). Psicoterapia online para todo o Brasil e palestras sobre saúde mental para empresas.">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Psicóloga Isabella Lacerda">
+<meta property="og:description" content="Psicoterapia online para todo o Brasil e palestras sobre saúde mental para empresas.">
+<meta property="og:url" content="https://psicologaisabellalacerda.com.br/">
+<meta property="og:image" content="https://psicologaisabellalacerda.com.br/img/isabella-hero.webp">
+<meta name="theme-color" content="#33243a">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: faixas em areia e ameixa (cores da marca); fotos em arco; a tulipa da bio vira o selo da marca */
+:root{
+  --paper:#f7f1ec;      /* areia clara */
+  --surface:#fffbf8;
+  --sand:#ecdccf;
+  --ink:#33243a;        /* ameixa-noite */
+  --muted:#6e5f6f;
+  --plum:#5a4560;       /* ameixa da marca */
+  --tulip:#b8606d;      /* rosa-tulipa */
+  --line:#33243a1f;
+  --on-plum:#ffffff;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1d1620;--surface:#261e2a;--sand:#33283a;--ink:#f1e8ee;--muted:#b6a6b5;--plum:#c9b2d1;--tulip:#e59aa5;--line:#f1e8ee24;--on-plum:#1d1620;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1d1620;--surface:#261e2a;--sand:#33283a;--ink:#f1e8ee;--muted:#b6a6b5;--plum:#c9b2d1;--tulip:#e59aa5;--line:#f1e8ee24;--on-plum:#1d1620;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--tulip);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--tulip)}
+p{margin:0}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--body);text-decoration:none;padding:16px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer}
+.btn.primary{background:var(--plum);color:var(--on-plum)}
+.btn.primary:hover{filter:brightness(1.12)}
+.btn.ghost{border-color:var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--tulip)}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand picture{flex:none;display:block}
+.brand picture img{width:34px;height:auto}
+.brand div{display:grid;line-height:1.15}
+.brand b{font-family:var(--display);font-weight:400;font-size:23px}
+.brand span{font-size:11.5px;letter-spacing:.08em;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.nav .btn{padding:12px 20px;color:var(--on-plum)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:500 14px var(--body);color:var(--ink)}
+
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,80px);align-items:center;padding-block:clamp(44px,7vw,88px)}
+.hero h1{font-size:clamp(44px,6.6vw,84px);margin:18px 0 22px}
+.hero .lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:52ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:26px;color:var(--ink);line-height:1.1}
+.arch{aspect-ratio:4/5;max-width:100%;width:100%;border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--sand)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero .arch{max-width:430px;justify-self:end}
+.hero .arch img{object-position:50% 30%}
+
+section.block{padding-block:clamp(64px,9vw,112px)}
+.head{display:grid;gap:14px;max-width:660px;margin-bottom:clamp(36px,5vw,56px)}
+.head h2{font-size:clamp(36px,4.6vw,56px)}
+.head p{color:var(--muted)}
+
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.topic{padding:28px 24px 30px 0;border-bottom:1px solid var(--line);min-width:0}
+.topic:not(:nth-child(4n+1)){padding-left:24px;border-left:1px solid var(--line)}
+.topic h3{font-size:25px;margin-bottom:10px}
+.topic p{color:var(--muted);font-size:15.5px}
+.note{margin-top:28px;font-size:14.5px;color:var(--muted)}
+
+.about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,88px);align-items:center}
+.about .arch{max-width:400px}
+.about .arch img{object-position:50% 25%}
+.about .text{display:grid;gap:18px;max-width:60ch;min-width:0}
+.about .text h2{font-size:clamp(36px,4.6vw,56px)}
+.about .text p{color:var(--muted)}
+.about .said{font-family:var(--display);font-style:italic;font-size:22px;color:var(--ink);border-left:2px solid var(--tulip);padding-left:18px}
+.creds{list-style:none;margin:8px 0 0;padding:0;display:grid;border-top:1px solid var(--line)}
+.creds li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.creds li span{color:var(--muted);font-size:13px;letter-spacing:.04em}
+
+.belief{position:relative;min-height:340px;display:grid;align-items:center;overflow:hidden;background:var(--plum)}
+.belief img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;mix-blend-mode:luminosity}
+.belief .wrap{position:relative;padding-block:clamp(64px,9vw,104px);color:var(--on-plum)}
+.belief p{font-family:var(--display);font-weight:300;font-size:clamp(28px,3.6vw,44px);line-height:1.2;max-width:24ch}
+.belief p em{font-style:italic}
+.belief small{display:block;margin-bottom:18px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;counter-increment:s;display:grid;gap:10px;align-content:start;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:44px;line-height:1;color:var(--tulip)}
+.steps h3{font-size:24px}
+.steps p{color:var(--muted);font-size:15.5px}
+.privacy{margin-top:20px;display:flex;gap:16px;align-items:flex-start;background:var(--sand);border-radius:20px;padding:22px 26px;font-size:15.5px}
+.privacy svg{flex:none;margin-top:3px;color:var(--plum)}
+
+.online .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,88px);align-items:center}
+.online .arch{max-width:380px;justify-self:end}
+.online .arch img{object-position:40% 30%}
+.perks{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
+.perks li{padding-block:18px;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.perks b{font-family:var(--display);font-weight:400;font-size:24px}
+.perks span{color:var(--muted);font-size:15.5px}
+
+.biz .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.biz .media{position:relative;max-width:400px;padding-bottom:56px;min-width:0}
+.biz .arch{max-width:330px}
+.biz .arch img{object-position:50% 30%}
+.biz .inset{position:absolute;right:0;bottom:0;width:44%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;border:6px solid var(--paper);background:var(--sand)}
+.biz .inset img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.biz .text{display:grid;gap:16px;min-width:0}
+.biz .text h2{font-size:clamp(34px,4.2vw,52px)}
+.biz .text p{color:var(--muted);max-width:58ch}
+ .chips-intro{font-size:14px;font-weight:600;color:var(--ink);margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;background:var(--surface)}
+
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,88px);align-items:start}
+.faq .head{margin:0}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:22px;font-size:18px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:30px;line-height:1;color:var(--tulip);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding-bottom:22px;color:var(--muted);max-width:62ch}
+
+.contact{background:var(--ink);color:var(--paper)}
+.contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,80px);align-items:end;padding-block:clamp(64px,9vw,104px)}
+.contact h2{font-size:clamp(40px,5.4vw,68px)}
+.contact h2 em{color:var(--sand)}
+.contact p{color:color-mix(in srgb,var(--paper) 72%,transparent);margin-top:18px;max-width:48ch}
+.contact .btn{margin-top:30px;background:var(--sand);color:var(--ink)}
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:18px;font-size:15px}
+.contact li span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--paper) 60%,transparent);margin-bottom:2px}
+.contact li b{font-weight:500}
+.contact li a{text-decoration:none}
+.social{display:flex;gap:10px;margin-top:4px}
+.social a{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid color-mix(in srgb,var(--paper) 30%,transparent);color:var(--paper)}
+.social a:hover{background:color-mix(in srgb,var(--paper) 12%,transparent)}
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:20;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.22);text-decoration:none}
+.wa-float:hover{filter:brightness(1.06)}
+
+footer{padding-block:32px 96px;font-size:13px;color:var(--muted)}
+footer .wrap{display:grid;gap:14px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+.crisis{border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:14px;color:var(--ink)}
+.crisis b{font-weight:600}
+
+@media (max-width:900px){
+  .hero .wrap,.about .wrap,.online .wrap,.biz .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .arch{justify-self:start;max-width:340px}
+  .about .arch,.online .arch{max-width:300px;justify-self:start;order:2}
+  .biz .media{max-width:360px;order:2}
+  .biz .arch{max-width:280px}
+  .grid3{grid-template-columns:1fr 1fr}
+  .topic,.topic:not(:nth-child(4n+1)){padding:24px 20px 26px 0;border-left:0}
+  .topic:nth-child(2n){padding-left:20px;border-left:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:780px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px;padding:22px max(20px,env(safe-area-inset-right,0px)) 26px max(20px,env(safe-area-inset-left,0px))}
+  .nav.open{display:flex}
+  .menu-btn{display:inline-block}
+  .creds li{grid-template-columns:1fr;gap:2px}
+}
+@media (max-width:560px){
+  .grid3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .topic,.topic:nth-child(2n),.topic:not(:nth-child(4n+1)){padding:22px 0;border-left:0}
+  .hero .arch{max-width:280px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}summary::after{transition:none}}
+</style>
+<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://psicologaisabellalacerda.com.br/">
+<style>#lr-portfolio-badge .lrb-short{display:none}@media(max-width:600px){#lr-portfolio-badge{bottom:84px!important;left:12px!important;padding:8px 12px!important;font-size:11px!important}#lr-portfolio-badge .lrb-full{display:none}#lr-portfolio-badge .lrb-short{display:inline}}</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <picture><source srcset="img/logo-il-claro.png" media="(prefers-color-scheme: dark)"><img src="img/logo-il.png" alt="" width="202" height="240"></picture>
+      <div><b>Isabella Lacerda</b><span>Psicóloga · CRP 06/192029</span></div>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Seções">
+      <a href="#para-quem">Para quem</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#sessoes">Sessões</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn primary" href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener noreferrer">Agendar sessão</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Psicoterapia online · para todo o Brasil</p>
+        <h1>Um espaço para você se olhar <em>com mais cuidado.</em></h1>
+        <p class="lead">Sou psicóloga clínica e organizacional e atendo de forma online pessoas de todo o Brasil. Na terapia, ofereço um espaço de acolhimento, reflexão e fortalecimento.</p>
+        <div class="ctas">
+          <a class="btn primary" href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+          <a class="btn ghost" href="#sessoes">Como são as sessões</a>
+        </div>
+        <div class="facts">
+          <span><b>50 min</b>cada sessão</span>
+          <span><b>Online</b>por videochamada</span>
+          <span><b>TCC</b>abordagem</span>
+        </div>
+      </div>
+      <div class="arch"><img src="img/isabella-hero.webp" alt="Psicóloga Isabella Lacerda sorrindo, sentada à mesa com um caderno e o notebook" width="683" height="854"></div>
+    </div>
+  </section>
+
+  <section class="block band" id="para-quem">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Para quem é</p>
+        <h2>Principais demandas <em>que eu atendo</em></h2>
+        <p>Se você se identificou com algum destes temas, talvez seja um bom momento para começar.</p>
+      </div>
+      <div class="grid3">
+        <article class="topic"><h3>Autoestima e autoconfiança</h3><p>Baixa autoestima, insegurança e dificuldade de confiar em si mesma.</p></article>
+        <article class="topic"><h3>Estresse e sobrecarga</h3><p>Gerenciamento do estresse e da sobrecarga emocional do dia a dia.</p></article>
+        <article class="topic"><h3>Ansiedade</h3><p>Transtornos de ansiedade e preocupações que não passam.</p></article>
+        <article class="topic"><h3>Depressão</h3><p>Desânimo, perda de interesse e desesperança.</p></article>
+        <article class="topic"><h3>Relacionamentos</h3><p>Conflitos, medo de rejeição e relações que machucam.</p></article>
+        <article class="topic"><h3>Transtorno afetivo bipolar</h3><p>Acompanhamento para compreender e lidar com as oscilações de humor.</p></article>
+        <article class="topic"><h3>Procrastinação</h3><p>Adiar o que é importante e travar antes mesmo de começar.</p></article>
+        <article class="topic"><h3>TDAH</h3><p>Estratégias para organização, foco e rotina no dia a dia.</p></article>
+      </div>
+      <p class="note">A psicoterapia é um espaço seguro para compreender sua história, desenvolver recursos emocionais e lidar de forma mais saudável com os seus desafios.</p>
+    </div>
+  </section>
+
+  <section class="block about" id="sobre">
+    <div class="wrap">
+      <div class="arch"><img src="img/isabella-poltrona.webp" alt="Isabella Lacerda sentada em uma poltrona, sorrindo" width="700" height="875" loading="lazy"></div>
+      <div class="text">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Olá, sou a <em>Isabella.</em></h2>
+        <p>Moro em São Paulo e atendo de forma online pessoas de todo o Brasil. Trabalho como psicóloga clínica e organizacional, mas também gosto de participar de projetos na área social.</p>
+        <p>Na psicoterapia, busco oferecer um espaço de acolhimento, reflexão e fortalecimento, valorizando quem você é e reconhecendo seus contextos sociais, históricos e afetivos.</p>
+        <p class="said">Meu compromisso é te apoiar em sua jornada de autoconhecimento e enfrentamento dos seus desafios. Conte comigo!</p>
+        <ul class="creds">
+          <li><span>Graduação</span>Psicologia, Universidade Anhembi Morumbi</li>
+          <li><span>Pós-graduação</span>Terapia Cognitivo-Comportamental, PUC Minas</li>
+          <li><span>Pós-graduação</span>Saúde Mental, Santa Casa de São Paulo (cursando)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="belief" aria-label="O que eu busco">
+    <img src="img/leitura.webp" alt="" width="1400" height="933" loading="lazy">
+    <div class="wrap">
+      <small>O que eu busco</small>
+      <p>O objetivo do meu trabalho é contribuir para <em>mudanças reais e significativas</em> na vida dos meus pacientes.</p>
+    </div>
+  </section>
+
+  <section class="block" id="sessoes">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Como são as sessões</p>
+        <h2>Um processo construído <em>com você</em></h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Entender sua história</h3><p>Nas primeiras sessões, meu foco é te conhecer profundamente e entender o que você deseja construir na psicoterapia.</p></li>
+        <li><h3>Construir caminhos</h3><p>Ao longo do processo, definimos juntos objetivos e caminhos que façam sentido para a sua realidade.</p></li>
+        <li><h3>Novas formas de lidar</h3><p>Trabalho com intervenções práticas, desenvolvimento de habilidades emocionais e mudanças de comportamento, sempre me adaptando a cada caso.</p></li>
+        <li><h3>Autodesenvolvimento</h3><p>Incentivo a autorreflexão por meio de perguntas que ampliam seu autoconhecimento e autonomia.</p></li>
+      </ol>
+      <div class="privacy">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <p><b>Um espaço seguro e sigiloso</b> para você falar sobre suas dificuldades, emoções e objetivos, como determina o Código de Ética Profissional do Psicólogo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band online" id="online">
+    <div class="wrap">
+      <div>
+        <div class="head" style="margin-bottom:28px">
+          <p class="eyebrow">Atendimento online</p>
+          <h2>Terapia de onde <em>você estiver</em></h2>
+          <p>Os atendimentos são feitos por videochamada, para pessoas de todo o Brasil, com sessões de 50 minutos.</p>
+        </div>
+        <ul class="perks">
+          <li><b>No conforto da sua casa</b><span>Você escolhe um lugar tranquilo e reservado para a sessão.</span></li>
+          <li><b>De qualquer lugar do Brasil</b><span>Basta uma boa conexão com a internet.</span></li>
+          <li><b>Sem tempo de deslocamento</b><span>O tempo do trânsito vira tempo para você.</span></li>
+        </ul>
+      </div>
+      <div class="arch"><img src="img/isabella-notebook.webp" alt="Isabella Lacerda sorrindo em frente ao notebook, durante um atendimento online" width="683" height="854" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="block biz" id="empresas">
+    <div class="wrap">
+      <div class="media">
+        <div class="arch"><img src="img/palestra-falando.webp" alt="Isabella Lacerda conduzindo uma palestra sobre produtividade para uma equipe" width="720" height="900" loading="lazy"></div>
+        <div class="inset"><img src="img/palestra-sentada.webp" alt="Isabella Lacerda sorrindo no palco, antes do treinamento Produtividade com estratégia" width="540" height="720" loading="lazy"></div>
+      </div>
+      <div class="text">
+        <p class="eyebrow">Para empresas</p>
+        <h2>Palestras e treinamentos em <em>saúde mental</em></h2>
+        <p>Atuo há 6 anos na área organizacional, com uma experiência corporativa que reúne gestão de riscos psicossociais, palestras e rodas de conversa com equipes de diferentes níveis, e ações de engajamento e fortalecimento da cultura organizacional.</p>
+        <p class="chips-intro">Possuo expertise em palestras sobre:</p>
+        <div class="chips"><span>Produtividade</span><span>Comunicação assertiva</span><span>Assédio moral e sexual</span><span>Prevenção do estresse</span><span>Trabalho em equipe</span><span>Entre outros temas</span></div>
+        <p style="margin-top:8px"><a class="btn ghost" href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Gostaria%20de%20saber%20sobre%20palestras%20e%20treinamentos%20para%20empresas." target="_blank" rel="noopener noreferrer">Pedir uma proposta</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band faq" id="duvidas">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Dúvidas</p>
+        <h2>Perguntas <em>frequentes</em></h2>
+        <p>Ficou alguma dúvida? Me chame no WhatsApp.</p>
+      </div>
+      <div>
+        <details><summary>É a minha primeira vez na psicoterapia, o que devo dizer?</summary><p>É normal sentir dúvidas ou insegurança ao iniciar o processo terapêutico. Na entrevista inicial, eu faço algumas perguntas importantes para entendermos melhor a sua história de vida e o seu momento presente. Juntos vamos explorando o que for mais relevante para as suas necessidades atuais. O mais importante é que você se sinta confortável para se expressar no seu tempo.</p></details>
+        <details><summary>Como são feitas as sessões online e quais são os requisitos?</summary><p>As sessões são realizadas por videochamada através da plataforma Google Meet. O link é enviado para o seu e-mail e para o seu Google Agenda. A sessão online é tratada como um compromisso e para isso se faz necessário que esteja conectado a uma rede de internet, em ambiente privativo, livre de ruídos e sendo aconselhável o uso de fones de ouvido.</p></details>
+        <details><summary>O que eu falar na sessão ficará em sigilo?</summary><p>Sim. Tudo o que é compartilhado nas sessões, incluindo suas informações pessoais e sua história de vida, é mantido em sigilo. O Código de Ética Profissional do Psicólogo estabelece o sigilo como dever fundamental da profissão, garantindo a proteção da sua privacidade.</p></details>
+        <details><summary>Você atende por plano de saúde?</summary><p>Trabalho somente com atendimentos particulares, mas emito o Receita Saúde (recibo digital gerado pela Receita Federal) para todos os pacientes. Caso o seu plano de saúde tenha a opção de reembolso, você pode solicitar utilizando este recibo e o comprovante de pagamento.</p></details>
+        <details><summary>Qual é o valor de cada sessão?</summary><p>Os valores são acordados no contato direto comigo, conforme as diretrizes do Código de Ética Profissional do Psicólogo. Entre em contato para mais informações.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <div>
+        <h2>Se você se identificou, <em>vamos conversar.</em></h2>
+        <p>Talvez seja um bom momento para começar a olhar para si com mais cuidado. Me mande uma mensagem.</p>
+        <a class="btn" href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+      </div>
+      <ul>
+        <li><span>Redes</span><div class="social">
+          <a href="https://www.instagram.com/psi.isabellalacerda/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @psi.isabellalacerda"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://br.linkedin.com/in/isabella-lacerda-039327190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Isabella Lacerda"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg></a>
+          <a href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.67.31 2.8 2.8 0 0 0-.87 2.08 4.9 4.9 0 0 0 1.02 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.69 2.23.75 3.03.63.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg></a>
+        </div></li>
+        <li><span>Atendimento</span><b>Online, para todo o Brasil</b></li>
+        <li><span>Registro</span><b>CRP 06/192029</b></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<a class="wa-float" href="https://wa.me/5511939171771?text=Ol%C3%A1%2C%20Isabella!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.67.31 2.8 2.8 0 0 0-.87 2.08 4.9 4.9 0 0 0 1.02 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.69 2.23.75 3.03.63.49-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg></a>
+
+<footer>
+  <div class="wrap">
+    <p class="crisis"><b>Este site não oferece atendimento de urgência.</b> Se você está em sofrimento intenso, ligue 188 (CVV, gratuito, 24h) ou procure o pronto-socorro mais próximo.</p>
+    <div class="row">
+      <span>Isabella Lacerda · Psicóloga · CRP 06/192029</span>
+      <span>Site por LR Social Media</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+  function close(){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='Menu';}
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.textContent=o?'Fechar':'Menu';});
+  n.addEventListener('click',function(e){if(e.target.closest('a')&&n.classList.contains('open'))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();b.focus();}});
+})();
+</script>
+<a id="lr-portfolio-badge" href="https://lrsocialmedia.com.br/criacao-de-sites/#trabalhos" style="position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#181918;color:#f5f2ed;border:1px solid #dfb8ae;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.3px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35)"><span style="color:#dfb8ae;font-weight:700">LR</span><span class="lrb-full">Projeto LR Social Media · Voltar ao portfólio ↗</span><span class="lrb-short">Projeto LR Social Media ↗</span></a>
+</body>
+</html>
