@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quem somos | Serralheria Grupo SCM</title>
+<meta name="description" content="Conheça a Serralheria Grupo SCM: estruturas metálicas do projeto à instalação, com atendimento em São José dos Campos, região e Litoral Norte.">
+<meta name="theme-color" content="#111214">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111214; --ink-2:#1a1c1f; --ink-3:#24272b; --steel:#8d939a; --line:#ffffff1f;
+  --paper:#ecebe7; --paper-2:#dddbd5; --red:#a61e22; --red-2:#c62a2e; --text:#e9e8e4; --muted:#a3a7ad;
+  --titulo:"Barlow Condensed","Arial Narrow",Arial,sans-serif; --corpo:Inter,system-ui,sans-serif;
+  --wrap:1200px; --g:clamp(18px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--text);font:400 16px/1.65 var(--corpo);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titulo);text-transform:uppercase;line-height:.98;margin:0 0 .45em;letter-spacing:.005em}
+h1{font-weight:800;font-size:clamp(46px,8.4vw,112px)}
+h2{font-weight:700;font-size:clamp(36px,5.2vw,68px)}
+h3{font-weight:700;font-size:clamp(22px,2vw,28px)}
+h1 em,h2 em{font-style:normal;color:var(--red-2)}
+p{margin:0 0 1em;color:var(--muted)}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
+.eyebrow{display:flex;align-items:center;gap:12px;font:600 12px/1 var(--corpo);letter-spacing:.28em;text-transform:uppercase;color:var(--red-2);margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--red-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1 var(--corpo);letter-spacing:.02em;text-decoration:none;padding:17px 28px;border-radius:2px;background:var(--red);color:#fff;border:2px solid var(--red);transition:background .25s,transform .25s}
+.btn:hover{background:var(--red-2);border-color:var(--red-2);transform:translateY(-2px)}
+.btn.sec{background:transparent;border-color:#ffffff55;color:var(--text)}
+.btn.sec:hover{border-color:var(--text);background:#ffffff0d}
+.btn svg{width:18px;height:18px}
+
+/* Topo */
+.topo{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,backdrop-filter .3s}
+.topo.rolou{background:#111214e6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca-selo{width:42px;height:42px;display:grid;place-items:center;border:2px solid var(--text);font:800 17px/1 var(--titulo);letter-spacing:.02em;clip-path:polygon(50% 0,100% 18%,100% 70%,50% 100%,0 70%,0 18%)}
+.marca-nome{font:700 20px/1 var(--titulo);letter-spacing:.06em;text-transform:uppercase}
+.marca-nome small{display:block;font:600 9.5px/1 var(--corpo);letter-spacing:.32em;color:var(--steel);margin-bottom:4px}
+.menu{display:flex;align-items:center;gap:30px;font-size:14px}
+.menu a{text-decoration:none;color:#d6d5d0}
+.menu a:hover{color:#fff}
+.menu .btn{padding:12px 18px;font-size:14px;color:#fff}
+@media(max-width:900px){.menu a:not(.btn){display:none}}
+
+/* Abertura */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 90px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+   radial-gradient(60% 55% at 78% 30%,#a61e2238,transparent 70%),
+   radial-gradient(40% 40% at 85% 85%,#ffffff10,transparent 70%),
+   linear-gradient(180deg,#16181b 0%,var(--ink) 100%)}
+.hero .vigas{position:absolute;inset:0;z-index:-1;opacity:.55;pointer-events:none}
+.hero-foto{position:absolute;right:0;top:0;bottom:0;width:58%;z-index:-1;
+  -webkit-mask-image:linear-gradient(to left,#000 45%,transparent);mask-image:linear-gradient(to left,#000 45%,transparent)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.05) brightness(.7)}
+.hero-txt{max-width:760px}
+.hero .intro{font-size:clamp(17px,1.5vw,20px);color:#c9cacd;max-width:560px;margin-bottom:34px}
+.acoes{display:flex;flex-wrap:wrap;gap:14px}
+.regiao{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:46px;padding-top:24px;border-top:1px solid var(--line);font:600 13px/1 var(--corpo);letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.regiao span::before{content:"";display:inline-block;width:6px;height:6px;background:var(--red-2);margin-right:10px;vertical-align:middle;transform:rotate(45deg)}
+
+/* Faixa */
+.faixa{background:var(--red);overflow:hidden;border-block:1px solid #ffffff22}
+.faixa-trilho{display:flex;gap:48px;width:max-content;padding:18px 0;animation:faixa 38s linear infinite}
+.faixa span{font:700 22px/1 var(--titulo);letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap}
+.faixa span::after{content:"✦";margin-left:48px;opacity:.6;font-size:14px;vertical-align:middle}
+@keyframes faixa{to{transform:translateX(-50%)}}
+
+/* Seções */
+.secao{padding:clamp(80px,11vw,140px) 0}
+.secao--clara{background:var(--paper);color:var(--ink)}
+.secao--clara p{color:#55595f}
+.secao--clara .eyebrow{color:var(--red)}
+.secao--clara .eyebrow::before{background:var(--red)}
+.cabeca{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:56px}
+.cabeca p{max-width:460px;justify-self:end;margin:0}
+@media(max-width:860px){.cabeca{grid-template-columns:1fr;gap:10px}.cabeca p{justify-self:start}}
+
+/* Pilares */
+.pilares{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.pilar{padding:30px 26px 34px 0;border-right:1px solid #11121422;margin-right:26px}
+.pilar:last-child{border-right:0;margin-right:0}
+.pilar b{display:block;font:800 15px/1 var(--titulo);color:var(--red);letter-spacing:.1em;margin-bottom:18px}
+.pilar h3{color:var(--ink)}
+.pilar p{margin:0;font-size:15px}
+@media(max-width:900px){.pilares{grid-template-columns:1fr 1fr}.pilar{margin-right:0;padding-right:20px;border-right:0;border-bottom:1px solid #11121422}}
+@media(max-width:560px){.pilares{grid-template-columns:1fr}}
+
+/* Serviços */
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.servico{position:relative;background:var(--ink-2);padding:36px 30px 32px;min-height:280px;display:flex;flex-direction:column;transition:background .3s}
+.servico:hover{background:var(--ink-3)}
+.servico::before{content:"";position:absolute;left:0;top:0;width:0;height:3px;background:var(--red-2);transition:width .4s}
+.servico:hover::before{width:100%}
+.servico .ico{width:44px;height:44px;color:var(--red-2);margin-bottom:24px}
+.servico h3{color:#fff}
+.servico p{font-size:15px;flex:1}
+.servico a{font:600 14px/1 var(--corpo);text-decoration:none;color:#fff;border-bottom:1px solid var(--red-2);padding-bottom:4px;align-self:flex-start}
+@media(max-width:960px){.servicos{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.servicos{grid-template-columns:1fr}.servico{min-height:auto}}
+
+/* Como trabalhamos: linha do tempo que se preenche com a rolagem */
+.jornada{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,90px);align-items:start}
+.jornada-topo{position:sticky;top:120px}
+.jornada-topo h2{color:var(--ink)}
+.jornada-topo p{max-width:380px;margin-bottom:28px}
+.etapas{list-style:none;margin:0;padding:0 0 0 46px;position:relative;display:grid;gap:56px;--prog:0}
+.etapas::before,.etapas::after{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px}
+.etapas::before{background:#11121426}
+.etapas::after{background:var(--red);transform-origin:top;transform:scaleY(var(--prog));transition:transform .2s linear}
+.etapa{position:relative;display:grid;gap:18px}
+.etapa::before{content:"";position:absolute;left:-46px;top:6px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:2px solid #11121440;transition:border-color .4s,background .4s}
+.etapa.feita::before{border-color:var(--red);background:var(--red);box-shadow:0 0 0 6px #a61e2222}
+.etapa-num{font:800 clamp(64px,7vw,96px)/.8 var(--titulo);color:transparent;-webkit-text-stroke:1.5px #11121433;transition:-webkit-text-stroke-color .4s}
+.etapa.feita .etapa-num{-webkit-text-stroke-color:var(--red)}
+.etapa-rot{display:block;font:600 11.5px/1 var(--corpo);letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.etapa h3{color:var(--ink);font-size:clamp(26px,2.6vw,34px)}
+.etapa p{margin:0;max-width:520px}
+.etapa-foto{margin:0;position:relative;aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--paper-2)}
+.etapa-foto img{width:100%;height:100%;object-fit:cover}
+.etapa-foto .vazio{position:absolute;inset:0;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#dddbd5 0 16px,#d6d4ce 16px 32px);color:#8a8d91;font:600 11px/1.5 var(--corpo);letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:900px){.jornada{grid-template-columns:1fr}.jornada-topo{position:static}}
+@media(max-width:560px){.etapas{padding-left:38px;gap:44px}.etapa::before{left:-38px;width:20px;height:20px}.etapas::before,.etapas::after{left:9px}}
+
+/* Trabalhos */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;grid-auto-flow:dense;gap:10px}
+.foto{position:relative;margin:0;overflow:hidden;background:var(--ink-3)}
+.foto--alta{grid-row:span 2}.foto--larga{grid-column:span 2}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.foto:hover img{transform:scale(1.05)}
+.foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,#111214e6);font:700 18px/1.1 var(--titulo);text-transform:uppercase;letter-spacing:.03em}
+.foto figcaption small{display:block;font:600 10.5px/1 var(--corpo);letter-spacing:.24em;color:var(--red-2);margin-bottom:6px}
+.foto .vazio{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;
+  background:repeating-linear-gradient(135deg,#1d2023 0 16px,#202326 16px 32px);color:#6f747a;font:600 11px/1.5 var(--corpo);letter-spacing:.2em;text-transform:uppercase}
+.trab-fim{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-top:34px}
+.trab-fim a.link{font-size:15px;text-decoration:none;border-bottom:1px solid var(--red-2);padding-bottom:4px}
+@media(max-width:860px){.galeria{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.foto--larga{grid-column:span 2}}
+
+/* Página de trabalhos */
+.filtros{display:flex;flex-wrap:wrap;gap:10px;margin:-8px 0 34px}
+.filtro{font:600 13px/1 var(--corpo);letter-spacing:.06em;text-transform:uppercase;color:#d6d5d0;background:transparent;border:1px solid #ffffff33;padding:12px 18px;cursor:pointer;transition:background .25s,border-color .25s,color .25s}
+.filtro:hover{border-color:#fff;color:#fff}
+.filtro.on{background:var(--red);border-color:var(--red);color:#fff}
+.filtro:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--red-2);outline-offset:3px}
+.foto.oculta{display:none}
+.topo-pagina{padding:150px 0 40px}
+.topo-pagina .volta{display:inline-block;margin-bottom:26px;font-size:14px;text-decoration:none;color:var(--muted)}
+.topo-pagina .volta:hover{color:#fff}
+.topo-pagina p{max-width:560px;font-size:18px}
+.galeria--previa{grid-auto-rows:260px}
+@media(max-width:860px){.galeria--previa{grid-auto-rows:190px}.galeria--previa .foto--alta{grid-row:span 1}}
+
+/* Onde atendemos */
+.atende{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.cidades{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.cidades li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid #11121422;font:700 clamp(24px,2.6vw,34px)/1 var(--titulo);text-transform:uppercase;color:var(--ink)}
+.cidades li span{font:500 12px/1 var(--corpo);letter-spacing:.2em;color:var(--red)}
+@media(max-width:860px){.atende{grid-template-columns:1fr;gap:30px}}
+
+/* Dúvidas */
+.faq{max-width:860px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:24px 44px 24px 0;position:relative;font:600 18px/1.35 var(--corpo);color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font:600 30px/1 var(--titulo);color:var(--red-2);transition:transform .3s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding-bottom:24px;margin:0;max-width:720px}
+
+/* Chamada final */
+.final{position:relative;overflow:hidden;background:var(--red);padding:clamp(80px,10vw,130px) 0;isolation:isolate}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;background:repeating-linear-gradient(115deg,#000 0 2px,transparent 2px 46px)}
+.final h2{color:#fff;max-width:900px}
+.final h2 em{color:#111214}
+.final p{color:#ffe5e3;max-width:560px;font-size:18px}
+.final .btn{background:#111214;border-color:#111214}
+.final .btn:hover{background:#000}
+.final .btn.sec{background:transparent;border-color:#ffffffaa;color:#fff}
+
+/* Rodapé */
+.rodape{padding:60px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.rodape .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.rodape h4{font:700 16px/1 var(--titulo);letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+.rodape p,.rodape a{font-size:14px;color:var(--muted);text-decoration:none;display:block;margin:0 0 8px}
+.rodape a:hover{color:#fff}
+.rodape .marca{display:flex;margin-bottom:18px}
+.creditos{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:26px;margin-top:10px;border-top:1px solid var(--line);font-size:12px;color:#6f747a}
+@media(max-width:760px){.rodape .wrap{grid-template-columns:1fr}}
+
+/* WhatsApp flutuante */
+.whats{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 10px 28px #0007;transform:scale(0);transition:transform .4s}
+.whats.on{transform:scale(1)}
+.whats svg{width:30px;height:30px}
+
+/* Revelar */
+.rev{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .9s ease}
+.rev.ok{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+
+@media(max-width:600px){
+  .btn{width:100%}
+  .menu .btn{width:auto;padding:11px 14px;font-size:13px;white-space:nowrap}
+  .marca-nome{font-size:17px;white-space:nowrap}
+  .hero{padding:120px 0 70px}
+  .hero-foto{width:100%;opacity:.45;-webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent 85%);mask-image:linear-gradient(to bottom,#000 30%,transparent 85%)}
+}
+
+/* Multipágina */
+.menu a[aria-current="page"]{color:#fff;box-shadow:inset 0 -2px 0 var(--red-2);padding-bottom:4px}
+.h1-pagina{font-size:clamp(46px,7vw,96px)}
+.mais{display:flex;justify-content:flex-start;margin-top:34px}
+.mais a{font:600 15px/1 var(--corpo);text-decoration:none;border-bottom:1px solid var(--red-2);padding-bottom:5px}
+.secao--clara .mais a{color:var(--ink);border-color:var(--red)}
+.servico-lista{display:grid;gap:2px;background:var(--line);border:1px solid var(--line)}
+.servico-item{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);background:var(--ink-2);padding:clamp(28px,4vw,48px)}
+.servico-item .ico{width:46px;height:46px;color:var(--red-2);margin-bottom:20px}
+.servico-item h2{font-size:clamp(30px,3.4vw,44px);color:#fff}
+.servico-item ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:10px}
+.servico-item li{position:relative;padding-left:24px;color:#d3d4d6}
+.servico-item li::before{content:"";position:absolute;left:0;top:.7em;width:12px;height:2px;background:var(--red-2)}
+.servico-item .rot{display:block;font:600 11.5px/1 var(--corpo);letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:14px}
+@media(max-width:820px){.servico-item{grid-template-columns:1fr}}
+.contato-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line);margin-bottom:56px}
+.contato-card{background:var(--ink-2);padding:34px 30px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.contato-card .rot{font:600 11.5px/1 var(--corpo);letter-spacing:.2em;text-transform:uppercase;color:var(--red-2)}
+.contato-card strong{font:700 clamp(22px,2vw,28px)/1.05 var(--titulo);text-transform:uppercase;color:#fff;overflow-wrap:anywhere;user-select:all}
+.contato-card p{margin:0;font-size:15px}
+.contato-card .btn{margin-top:auto;align-self:flex-start}
+@media(max-width:900px){.contato-grade{grid-template-columns:1fr}}
+.checklist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.checklist ol{margin:0;padding:0;list-style:none;counter-reset:c;display:grid;gap:0}
+.checklist li{counter-increment:c;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid #11121422;color:var(--ink);font-weight:500}
+.checklist li::before{content:counter(c,decimal-leading-zero);font:800 24px/1 var(--titulo);color:var(--red)}
+@media(max-width:860px){.checklist{grid-template-columns:1fr}}
+</style>
+<meta name="robots" content="noindex, nofollow"><style>#lr-portfolio-badge .lrb-short{display:none}@media(max-width:600px){#lr-portfolio-badge{bottom:max(22px,env(safe-area-inset-bottom))!important;left:14px!important;width:46px;height:46px;padding:0!important;justify-content:center;font-size:13px!important}#lr-portfolio-badge .lrb-full,#lr-portfolio-badge .lrb-short{display:none}}</style>
+</head>
+<body>
+<header class="topo" id="topo"><div class="wrap">
+  <a class="marca" href="../" aria-label="Serralheria Grupo SCM, início"><span class="marca-selo" aria-hidden="true">SCM</span><span class="marca-nome"><small>Serralheria</small>Grupo SCM</span></a>
+  <nav class="menu" aria-label="Navegação principal"><a href="../">Início</a><a href="../quem-somos/" aria-current="page">Quem somos</a><a href="../servicos/">Serviços</a><a href="../trabalhos/">Trabalhos</a><a href="../contato/">Contato</a><a class="btn" data-whats href="#">Pedir orçamento</a></nav>
+</div></header>
+<main id="inicio">
+<section class="topo-pagina"><div class="wrap">
+  <a class="volta" href="../">← Voltar para o início</a>
+  <div class="eyebrow">Quem somos</div>
+  <h1 class="h1-pagina">Metal bem feito,<br><em>obra que dura.</em></h1>
+  <p>A Serralheria Grupo SCM faz projetos, instalações, reformas de construção civil, galpões e manutenção de estruturas metálicas em São José dos Campos, na região e no Litoral Norte.</p>
+</div></section><section class="secao secao--clara" id="sobre"><div class="wrap">
+  <div class="cabeca rev">
+    <div><div class="eyebrow">O que nos guia</div><h2>Metal bem feito<br>é obra <em>que dura.</em></h2></div>
+    <p>A Serralheria Grupo SCM cuida da parte metálica da sua obra do começo ao fim: projeto, fabricação, instalação e manutenção, com acabamento técnico e foco em segurança.</p>
+  </div>
+  <div class="pilares rev">
+    <div class="pilar"><b>01</b><h3>Projeto</h3><p>Cada estrutura começa no papel, pensada para o uso e a carga do seu espaço.</p></div>
+    <div class="pilar"><b>02</b><h3>Segurança</h3><p>Fixação, solda e materiais escolhidos para a estrutura trabalhar com tranquilidade.</p></div>
+    <div class="pilar"><b>03</b><h3>Acabamento</h3><p>Acabamento técnico que protege o metal e valoriza a obra.</p></div>
+    <div class="pilar"><b>04</b><h3>Perto de você</h3><p>Atendimento técnico em São José dos Campos, na região e no Litoral Norte.</p></div>
+  </div>
+</div></section><section class="secao secao--clara" id="como"><div class="wrap jornada">
+  <div class="jornada-topo rev">
+    <div class="eyebrow">Como trabalhamos</div>
+    <h2>Da ideia à<br><em>estrutura pronta.</em></h2>
+    <p>Quatro etapas, com você acompanhando cada uma. Sem surpresa no meio da obra.</p>
+    <a class="btn" data-whats data-msg="Olá! Quero começar um projeto com a SCM." href="#">Começar meu projeto</a>
+  </div>
+  <ol class="etapas" id="etapas">
+    <li class="etapa">
+      <div class="etapa-num" aria-hidden="true">01</div>
+      <div class="etapa-txt"><span class="etapa-rot">Etapa 1 · Conversa e visita técnica</span><h3>Entender o que você precisa</h3><p>Você conta a ideia pelo WhatsApp e manda fotos do local. Quando a obra pede, vamos até lá medir e avaliar a estrutura existente.</p></div>
+      <figure class="etapa-foto"><div class="vazio">Foto: visita técnica</div></figure>
+    </li>
+    <li class="etapa">
+      <div class="etapa-num" aria-hidden="true">02</div>
+      <div class="etapa-txt"><span class="etapa-rot">Etapa 2 · Projeto e orçamento</span><h3>Desenhar a solução certa</h3><p>Definimos a estrutura, os materiais e o acabamento para o uso do seu espaço, e você recebe o orçamento com prazo combinado.</p></div>
+      <figure class="etapa-foto"><div class="vazio">Foto: projeto ou desenho</div></figure>
+    </li>
+    <li class="etapa">
+      <div class="etapa-num" aria-hidden="true">03</div>
+      <div class="etapa-txt"><span class="etapa-rot">Etapa 3 · Fabricação e montagem</span><h3>Cortar, soldar e montar</h3><p>As peças são fabricadas e a montagem é feita pela nossa equipe, com atenção à fixação, à solda e à segurança da obra.</p></div>
+      <figure class="etapa-foto"><div class="vazio">Foto: solda ou montagem</div></figure>
+    </li>
+    <li class="etapa">
+      <div class="etapa-num" aria-hidden="true">04</div>
+      <div class="etapa-txt"><span class="etapa-rot">Etapa 4 · Entrega e manutenção</span><h3>Entregar e cuidar depois</h3><p>Conferimos tudo com você na entrega e seguimos disponíveis para a manutenção da estrutura ao longo do tempo.</p></div>
+      <figure class="etapa-foto"><div class="vazio">Foto: obra entregue</div></figure>
+    </li>
+  </ol>
+</div></section><section class="secao secao--clara" id="atendemos"><div class="wrap atende">
+  <div class="rev"><div class="eyebrow">Onde atendemos</div><h2>Na sua obra,<br><em>onde ela estiver.</em></h2><p>Nossa base é São José dos Campos. Atendemos o Vale do Paraíba e o Litoral Norte com a mesma equipe e o mesmo cuidado.</p></div>
+  <ul class="cidades rev">
+    <li>São José dos Campos <span>Base</span></li>
+    <li>Vale do Paraíba <span>Região</span></li>
+    <li>Litoral Norte <span>Região</span></li>
+  </ul>
+</div></section><section class="final"><div class="wrap rev">
+  <h2>Tem uma obra em mente?<br><em>Vamos construir.</em></h2>
+  <p>Mande fotos, medidas e a cidade da obra pelo WhatsApp. A gente responde com o próximo passo.</p>
+  <div class="acoes"><a class="btn" data-whats href="#">Falar no WhatsApp</a><a class="btn sec" href="https://www.instagram.com/serralheriagruposcm/" target="_blank" rel="noopener noreferrer">Ver o Instagram</a></div>
+</div></section>
+</main>
+<footer class="rodape"><div class="wrap">
+  <div><a class="marca" href="../" style="margin-bottom:18px"><span class="marca-selo" aria-hidden="true">SCM</span><span class="marca-nome"><small>Serralheria</small>Grupo SCM</span></a><p>Projetos, instalações, galpões, coberturas, reformas e manutenção de estruturas metálicas.</p></div>
+  <div><h4>Páginas</h4><a href="../">Início</a><a href="../quem-somos/">Quem somos</a><a href="../servicos/">Serviços</a><a href="../trabalhos/">Trabalhos</a><a href="../contato/">Contato</a></div><div><h4>Contato</h4><a data-whats href="#">WhatsApp (12) 99134-0452</a><a href="https://www.instagram.com/serralheriagruposcm/" target="_blank" rel="noopener noreferrer">@serralheriagruposcm</a></div>
+  <div><h4>Atendimento</h4><p>São José dos Campos</p><p>Vale do Paraíba</p><p>Litoral Norte</p></div>
+  <div class="creditos"><span>© <span data-ano>2026</span> Serralheria Grupo SCM</span><span>Site por LR Social Media</span></div>
+</div></footer>
+<a class="whats" id="whats" data-whats href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+<script>
+(function(){
+  var NUM='5512991340452', MSG='Olá! Vim pelo site da Serralheria Grupo SCM e gostaria de um orçamento.';
+  document.querySelectorAll('[data-whats]').forEach(function(a){
+    a.href='https://wa.me/'+NUM+'?text='+encodeURIComponent(a.dataset.msg||MSG);
+    a.target='_blank'; a.rel='noopener noreferrer';
+  });
+  var topo=document.getElementById('topo'), w=document.getElementById('whats');
+  function rolar(){topo.classList.toggle('rolou',scrollY>30);w.classList.toggle('on',scrollY>innerHeight*.6);}
+  addEventListener('scroll',rolar,{passive:true});rolar();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ok');io.unobserve(e.target);}})},{threshold:.15});
+    document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+  } else document.querySelectorAll('.rev').forEach(function(el){el.classList.add('ok')});
+  var et=document.getElementById('etapas');
+  if(et){var itens=et.querySelectorAll('.etapa');
+    var prog=function(){var r=et.getBoundingClientRect(),alvo=innerHeight*.6;
+      var p=Math.min(1,Math.max(0,(alvo-r.top)/r.height));et.style.setProperty('--prog',p.toFixed(3));
+      itens.forEach(function(li){li.classList.toggle('feita',li.getBoundingClientRect().top<alvo);});};
+    addEventListener('scroll',prog,{passive:true});addEventListener('resize',prog);prog();}
+  document.querySelectorAll('[data-ano]').forEach(function(el){el.textContent=new Date().getFullYear()});
+})();
+</script>
+<a id="lr-portfolio-badge" href="https://lrsocialmedia.com.br/" style="position:fixed;left:16px;bottom:16px;z-index:2147483000;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#181918;color:#f5f2ed;border:1px solid #dfb8ae;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.3px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35)"><span style="color:#dfb8ae;font-weight:700">LR</span><span class="lrb-full">Prévia · LR Social Media ↗</span><span class="lrb-short">Prévia LR ↗</span></a>
+</body>
+</html>
