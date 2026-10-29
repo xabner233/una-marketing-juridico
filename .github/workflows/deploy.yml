@@ -4,6 +4,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Cada pasta do repositório vira um site em lrsocialmedia.com.br/portfolio/<pasta>
+# (a conta FTP já aponta para public_html/portfolio)
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,9 +16,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: una/
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
             .github/**
+            .nojekyll
             README.md
