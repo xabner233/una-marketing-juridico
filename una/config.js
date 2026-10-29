@@ -16,8 +16,8 @@ window.SITE = {
   },
 
   frames: {
-    total: 160, // valor impresso pelo fatiamento do vídeo
-    desktop: "assets/frames/desktop/f_{n}.webp",
-    mobile: "assets/frames/mobile/f_{n}.webp",
+    total: 220, // valor impresso pelo fatiamento do vídeo
+    desktop: "assets/frames/desktop/f_{n}.webp?v=5",
+    mobile: "assets/frames/mobile/f_{n}.webp?v=5",
   },
 };

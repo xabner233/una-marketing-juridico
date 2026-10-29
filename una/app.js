@@ -137,7 +137,7 @@
   }
 
   /* ── Parallax leve nas artes ──────────────────────────────────────────── */
-  const artes = reduzir ? [] : [...document.querySelectorAll(".arte")];
+  const artes = reduzir ? [] : [...document.querySelectorAll(".arte[data-parallax]")];
   if (artes.length) {
     const mover = () => {
       for (const a of artes) {
@@ -174,7 +174,12 @@
   if (S.whatsapp) {
     const num = String(S.whatsapp.numero || "").replace(/\D/g, "");
     const link = `https://wa.me/${num}?text=${encodeURIComponent(S.whatsapp.mensagem || "")}`;
-    document.querySelectorAll(".whats, [data-whats]").forEach((a) => (a.href = link));
+    document.querySelectorAll(".whats, [data-whats]").forEach((a) => {
+      const assunto = a.dataset.assunto;
+      a.href = assunto
+        ? `https://wa.me/${num}?text=${encodeURIComponent(`Olá! Vim pelo site e quero saber mais sobre ${assunto} para o meu escritório.`)}`
+        : link;
+    });
   }
 
   /* ── Formulário → e-mail ──────────────────────────────────────────────── */
