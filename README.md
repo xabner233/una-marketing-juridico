@@ -6,9 +6,9 @@ As cópias têm `noindex` (não aparecem no Google) e um selo "Projeto LR Social
 | Pasta | Endereço | Site original |
 |---|---|---|
 | `isabella/` | lrsocialmedia.com.br/portfolio/isabella | psicologaisabellalacerda.com.br |
-| `una/` | lrsocialmedia.com.br/portfolio/una | — |
+| `agora/` | lrsocialmedia.com.br/portfolio/agora | — (marca fictícia) |
 | `renovo/` | lrsocialmedia.com.br/portfolio/renovo | renovoestofados.com.br |
-| `seed-engenharia/` | lrsocialmedia.com.br/portfolio/seed-engenharia | — |
+| `raiz-engenharia/` | lrsocialmedia.com.br/portfolio/raiz-engenharia | — (marca fictícia) |
 | `serralheria-scm/` | lrsocialmedia.com.br/portfolio/serralheria-scm | — (prévia para o cliente, link oculto) |
 | `renovo-2/` | lrsocialmedia.com.br/portfolio/renovo-2 | — (versão 2.0) |
 

@@ -6,7 +6,7 @@
   --fundo-2: #161a14;
   --texto: #eef0e8;
   --texto-suave: #b3b9ad;
-  --acento: #5cbf3a;         /* verde Seed (a logo #1d7c0e, clareado para ler no escuro) */
+  --acento: #5cbf3a;         /* verde Raiz (a logo #1d7c0e, clareado para ler no escuro) */
   --acento-texto: #0a0f08;   /* texto sobre o acento */
   --laranja: #ee7a22;        /* a folha da logo */
   --linha: rgb(238 240 232 / 0.12);
@@ -65,7 +65,7 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
 .topo.rolou { background: rgb(14 17 13 / .6); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
 .marca { text-decoration: none; display: flex; align-items: center; }
 .marca-logo { height: 34px; width: auto; }
-/* Logo em tipografia: SEED serifado com as folhas da marca brotando do D */
+/* Logo em tipografia: RAIZ serifado com as folhas da marca brotando do D */
 .logo { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1; }
 .logo-nome { position: relative; font-family: var(--fonte-logo); font-weight: 600; font-size: 30px; letter-spacing: .04em; color: var(--texto); }
 .logo-folhas { position: absolute; width: .78em; height: .78em; right: -.3em; top: -.52em; }
@@ -254,7 +254,7 @@ body.lb-aberto { overflow: hidden; }
 }
 @media (max-width: 1100px) { .menu a[href="#duvidas"], .menu a[href="#brasil"] { display: none; } }
 
-/* ── Seed: redes, obras em vídeo, cidades ─────────────────────────────── */
+/* ── Raiz: redes, obras em vídeo, cidades ─────────────────────────────── */
 .redes { width: 100%; max-width: var(--largura); margin: 0; }
 .redes-rotulo { display: block; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 14px; }
 .redes ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 0; }

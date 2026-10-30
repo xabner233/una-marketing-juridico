@@ -7,7 +7,7 @@
   --texto: #f1eef6;
   --texto-suave: #a9a2b6;
   --texto-fraco: #7a7389;
-  --acento: #6b2bd6;         /* roxo da marca UNA */
+  --acento: #6b2bd6;         /* roxo da marca Ágora */
   --acento-claro: #b39af2;   /* roxo legível sobre o fundo escuro */
   --acento-texto: #ffffff;
   --linha: rgb(241 238 246 / 0.1);
@@ -51,7 +51,7 @@ h1 em, h2 em, .destaque em, blockquote em, .fato em { font-style: italic; color:
 p { margin: 0 0 1.1em; color: var(--texto-suave); text-wrap: pretty; }
 strong { font-weight: 500; }
 
-/* Rótulo de seção: "01 ── A UNA" */
+/* Rótulo de seção: "01 ── A Ágora" */
 .rotulo, .sobretitulo {
   display: inline-flex; align-items: center; gap: 14px;
   font: 500 11px/1 var(--fonte-texto); letter-spacing: .28em; text-transform: uppercase; color: var(--texto-suave);
